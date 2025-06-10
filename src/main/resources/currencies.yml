@@ -1,0 +1,32 @@
+# LivingEconomy Currency Definitions
+#
+# Each currency should have a unique key (e.g., "gold", "emerald_shards").
+# Properties:
+#   name: Display name of the currency (e.g., "Gold Coin")
+#   symbol: Short symbol for the currency (e.g., "G", "$")
+#   texture: (Optional) Path to a .png file in LivingEconomy/currencies/ for custom item textures.
+#            If using a custom item model, this might be used to map to it.
+#
+# Example:
+# currencies:
+#   gold:
+#     name: "Gold Coin"
+#     symbol: "G"
+#     texture: "gold_coin.png"
+#   silver:
+#     name: "Silver Piece"
+#     symbol: "S"
+#     # no texture defined, might use a default or be purely virtual
+#   emeralds:
+#     name: "Emeralds"
+#     symbol: "E"
+#     # This could represent the vanilla Emerald item if not using custom textures
+
+currencies:
+  gold:
+    name: "Gold Coin"
+    symbol: "G"
+    texture: "textures/gold_coin.png" # Example path if you bundle textures
+  silver:
+    name: "Silver Piece"
+    symbol: "S"

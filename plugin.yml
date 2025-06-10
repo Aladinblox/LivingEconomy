@@ -1,0 +1,43 @@
+name: LivingEconomy
+version: 3.0.0
+main: com.yourname.livingeconomy.LivingEconomy
+api-version: '1.21' # Enclose 1.21 in quotes
+author: [Your Name] # As per issue, replace if you have a specific name
+description: The ultimate, immersive economy plugin for Minecraft 1.21.
+softdepend: [PlaceholderAPI, Citizens]
+commands:
+  moneybag:
+    description: View currencies held outside the bank.
+    usage: /moneybag
+    permission: livingeconomy.player
+  quests:
+    description: Check current quest progress.
+    usage: /quests
+    permission: livingeconomy.player
+  bank:
+    description: Opens the bank GUI if near the bank.
+    usage: /bank
+    permission: livingeconomy.player
+  trade:
+    description: Secure player-to-player trading.
+    usage: /trade <player>
+    permission: livingeconomy.player
+  shop:
+    description: Manage or use player shops.
+    usage: /shop help
+    permission: livingeconomy.player
+  bounty:
+    description: Manage or view bounties.
+    usage: /bounty help
+    permission: livingeconomy.player
+  le:
+    description: Admin commands for LivingEconomy.
+    usage: /le help
+    permission: livingeconomy.admin
+permissions:
+  livingeconomy.player:
+    description: Basic player permissions for LivingEconomy.
+    default: true
+  livingeconomy.admin:
+    description: Admin permissions for LivingEconomy.
+    default: op

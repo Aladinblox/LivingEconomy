@@ -1,0 +1,39 @@
+# LivingEconomy English Language File (en_US)
+# General messages
+plugin_enabled: "&aLivingEconomy has been enabled!"
+plugin_disabled: "&cLivingEconomy has been disabled!"
+reload_success: "&aLivingEconomy configuration reloaded successfully."
+reload_failure: "&cCould not reload LivingEconomy configuration. Check console."
+player_only_command: "&cThis command can only be run by a player."
+no_permission: "&cYou do not have permission to use this command."
+invalid_usage: "&cInvalid command usage. Try: %usage%" # %usage% will be replaced by command usage
+
+# Money / Balance
+moneybag_header: "&6Your Money Bag:"
+money_format: "&e%amount% %currency_symbol% (%currency_name%)" # %amount%, %currency_symbol%, %currency_name%
+balance_check_other_header: "&6%player%''s Balances:" # %player%
+error_currency_not_found: "&cCurrency '%currency%' not found." # %currency%
+admin_gave_money: "&aYou gave %player% %amount% %currency%." # %player%, %amount%, %currency%
+player_received_money: "&aYou received %amount% %currency%." # %amount%, %currency%
+
+# Bank
+bank_gui_title: "&1Player Bank"
+bank_deposit_lore:
+  - "&7Click to deposit %currency_name%."
+bank_withdraw_lore:
+  - "&7Click to withdraw %currency_name%."
+not_near_bank: "&cYou must be near a bank to use this command."
+# ... more bank messages
+
+# Quests
+quest_progress_header: "&6Your Quests:"
+quest_none_active: "&7You do not have an active quest."
+quest_assigned: "&aNew Quest: &e%quest_name%!" # %quest_name%
+quest_description_prefix: "&7Description: "
+quest_progress_format: "&b%quest_name%: &f%progress% / %target%" # %quest_name%, %progress%, %target%
+quest_completed: "&6Quest Completed: &e%quest_name%!" # %quest_name%
+quest_reward_received: "&aYou received your quest rewards!"
+booth_not_assigned: "&cYou have not been assigned a quest booth yet. Please enter the bank area."
+# ... more quest messages
+
+# Shops, Trade, Bounty, Tax etc. will be added later

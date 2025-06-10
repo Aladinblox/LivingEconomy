@@ -1,0 +1,32 @@
+# LivingEconomy Main Configuration
+
+# Data settings
+data:
+  autosave_interval_minutes: 10 # How often to save all online player data
+
+# Economy settings
+economy:
+  max_loan_amount: 10000.0 # Maximum loan a player can take
+  global_tax:
+    rate_percentage: 1.5 # Global tax rate in percent (e.g., 1.5 for 1.5%)
+    interval_hours: 24   # How often the global tax is applied (in hours)
+  # Define primary currency for certain operations if needed later
+  # primary_currency: "gold"
+
+  loan:
+    interest_rate_percentage_daily: 1.0  # e.g., 1.0 for 1% daily interest
+    repayment_period_days: 7             # Duration of the loan in days
+    max_active_loans: 3                  # Maximum number of active loans a player can have
+# Bank settings
+bank:
+  # schematic_file: "bank.schem" # Name of the bank schematic in the schematics folder
+  # npc_name_banker: "Banker"
+  # npc_name_bounty_board: "Bounty Master"
+  # quest_booth:
+    # sign_material: OAK_SIGN # Material for player name signs on booths
+    # quest_giver_type: ARMOR_STAND # Or VILLAGER, etc. for booth NPCs
+
+# Marketplace settings
+marketplace:
+  # daily_rent_fee: 100.0
+  # rent_currency: "gold"

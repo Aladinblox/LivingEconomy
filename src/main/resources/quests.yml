@@ -1,0 +1,82 @@
+# LivingEconomy Quest Definitions
+#
+# Each quest has a unique key (e.g., "novice_miner", "forest_protector").
+# Properties:
+#   type: The type of quest. Supported types:
+#         BREAK_BLOCK, KILL_MOB, CRAFT_ITEM, FARM, (others to be added: FISH, TRAVEL, etc.)
+#   target: Specifics of the quest objective.
+#     material (for BREAK_BLOCK, CRAFT_ITEM, FARM): The Bukkit Material name (e.g., DIAMOND_ORE, WHEAT, IRON_INGOT).
+#     item (for CRAFT_ITEM, if more complex than material): Item key or name.
+#     entity_type (for KILL_MOB): The Bukkit EntityType name (e.g., ZOMBIE, SKELETON).
+#     amount: The quantity required to complete the quest.
+#   description: A player-friendly description of the quest.
+#   rewards:
+#     currency: A map of currency keys (from currencies.yml) to reward amounts.
+#               Can specify a fixed amount or a min/max range for randomness.
+#       <currency_key>: <amount>  OR
+#       <currency_key>:
+#         min: <min_amount>
+#         max: <max_amount>
+#     items: (Optional) A list of items to give as rewards. Format: "MATERIAL_NAME:amount[:custom_name_or_data]"
+#            Example: ["DIAMOND_SWORD:1", "COOKED_BEEF:16"]
+#     experience: (Optional) Amount of Minecraft XP levels to award.
+#     commands: (Optional) A list of commands to run (executed by console, use @p for player).
+#
+# Example:
+# quests:
+#   novice_miner_iron:
+#     type: "BREAK_BLOCK"
+#     target:
+#       material: "IRON_ORE"
+#       amount: 20
+#     description: "Mine 20 Iron Ore."
+#     rewards:
+#       currency:
+#         silver:
+#           min: 10
+#           max: 25
+#       items:
+#         - "STONE_PICKAXE:1"
+#   zombie_slayer_easy:
+#     type: "KILL_MOB"
+#     target:
+#       entity_type: "ZOMBIE"
+#       amount: 10
+#     description: "Defeat 10 Zombies in the wilderness."
+#     rewards:
+#       currency:
+#         silver: 15 # Fixed amount
+#       experience: 5
+#   bread_baker:
+#     type: "CRAFT_ITEM"
+#     target:
+#       material: "BREAD"
+#       amount: 32
+#     description: "Bake 32 loaves of fresh Bread."
+#     rewards:
+#       currency:
+#         gold: 5
+
+quests:
+  starter_miner:
+    type: "BREAK_BLOCK"
+    target:
+      material: "COAL_ORE"
+      amount: 15
+    description: "Get your hands dirty and mine 15 Coal Ore."
+    rewards:
+      currency:
+        silver:
+          min: 5
+          max: 10
+  local_pest_control:
+    type: "KILL_MOB"
+    target:
+      entity_type: "SPIDER" # Ensure this matches Bukkit's EntityType enum
+      amount: 8
+    description: "Local villagers are complaining about spiders. Deal with 8 of them."
+    rewards:
+      currency:
+        silver:
+          min: 8
+          max: 12
